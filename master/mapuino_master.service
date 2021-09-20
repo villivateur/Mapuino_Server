@@ -1,0 +1,13 @@
+[Unit]
+Description=Mapuino Server Master
+After=network.target
+
+[Service]
+Type=simple
+User=villivateur
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/bin/python3 /home/villivateur/service/MapuinoServer/master/main.py
+
+[Install]
+WantedBy=multi-user.target
